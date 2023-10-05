@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"log"
 	"net"
 )
 
@@ -27,4 +28,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	log.Printf("connected to %s (@ %s )", host, conn.RemoteAddr())
 }
